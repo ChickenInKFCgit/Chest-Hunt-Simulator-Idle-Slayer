@@ -99,9 +99,9 @@ class SimulateurCHID:
             self.executer_algorithmes() 
 
 
-        self.texte+="\n ------------------------------------------------------------"
-        self.texte+=f"\n # RESULTATS FINAUX POUR **{simulations} SIMULATIONS** :"
-        self.texte+="\n ------------------------------------------------------------"
+        self.texte+="\n--------------------------------------------------------------------------------------"
+        self.texte+=f"\n# RESULTATS FINAUX POUR **{simulations} SIMULATIONS** DE **{nbgenerations} GENRATIONS**"
+        self.texte+="\n--------------------------------------------------------------------------------------"
 
         for algo, resultat in self.final_data.items():
             resultat[0] = algo
@@ -111,7 +111,7 @@ class SimulateurCHID:
 
 
     def executer_algorithmes(self):
-        for algorithme in (self.algo_FULL_GAMBLE__,self.algo_SHIELD_DIRECT, self.algo_DOUBLE_SHIELD, self.algo_RAISONNABLE__):
+        for algorithme in (self.algo_FULL_GAMBLE,self.algo_SHIELD_DIRECT, self.algo_DOUBLE_SHIELD, self.algo_RAISONNABLE):
             res = [] 
             self.simulation_partie(algorithme, res)
 
@@ -151,7 +151,7 @@ class SimulateurCHID:
         return (nomalgo,avgmimics, avgchests, winrate, wins)
             
 
-    def algo_FULL_GAMBLE__(self,partie:JeuChasseTresor):
+    def algo_FULL_GAMBLE(self,partie:JeuChasseTresor):
         #full aléatoire, on prie.
         while partie.est_active(): 
             rang_coffre = gamble(0, partie.getnbcoffres()-1)
@@ -193,7 +193,7 @@ class SimulateurCHID:
                 rang_coffre = gamble(0, partie.getnbcoffres()-1)
                 partie.ouvrir(rang_coffre)
 
-    def algo_RAISONNABLE__(self,partie:JeuChasseTresor):
+    def algo_RAISONNABLE(self,partie:JeuChasseTresor):
         #consiste à faire algo DOUBLE SHIELD si mimic tué et sinon prendre le bouclier simple
         for k in range(2):
             rang_coffre = gamble(1, partie.getnbcoffres()-1)
