@@ -115,7 +115,7 @@ class SimulateurCHID:
             res = [] 
             self.simulation_partie(algorithme, res)
 
-            data = self.analyser(res,str(algorithme))
+            data = self.analyser(res,algorithme.__name__())
 
             self.rassembler_data(data)
 
@@ -223,5 +223,5 @@ def gamble(a,b):
 
 
 def simuler(nbgenerations:int, nbsimulations:int)->str:
-    simu = SimulateurCHID(50000,5)
+    simu = SimulateurCHID(nbgenerations,nbsimulations)
     return simu.texte
