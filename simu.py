@@ -115,7 +115,7 @@ class SimulateurCHID:
             res = [] 
             self.simulation_partie(algorithme, res)
 
-            data = self.analyser(res,algorithme.__name__())
+            data = self.analyser(res,algorithme.__name__)
 
             self.rassembler_data(data)
 
