@@ -99,9 +99,9 @@ class SimulateurCHID:
             self.executer_algorithmes() 
 
 
-        self.texte+="\n ____________________________________________________________"
+        self.texte+="\n ------------------------------------------------------------"
         self.texte+=f"\n # RESULTATS FINAUX POUR **{simulations} SIMULATIONS** :"
-        self.texte+="\n ____________________________________________________________"
+        self.texte+="\n ------------------------------------------------------------"
 
         for algo, resultat in self.final_data.items():
             resultat[0] = algo
@@ -133,7 +133,7 @@ class SimulateurCHID:
             self.final_data[data[0]][k] += (data[k])
 
     def affichage_console(self,data:tuple):
-        self.texte+=f"## {data[0]} \nMoyenne Mimics : {data[1]} | Moyenne Coffres : {data[2]} | Winrate : {data[3]}% | wins : {data[4]}/{self.n}"
+        self.texte+=f"\n## {data[0]} \nMoyenne Mimics : {data[1]} | Moyenne Coffres : {data[2]} | Winrate : {data[3]}% | wins : {data[4]}/{self.n}"
 
     def analyser(self, res:tuple, nomalgo:str)->tuple:
         avgmimics = 0
