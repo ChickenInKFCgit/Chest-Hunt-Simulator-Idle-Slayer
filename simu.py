@@ -100,7 +100,7 @@ class SimulateurCHID:
 
 
         self.texte+="\n--------------------------------------------------------------------------------------"
-        self.texte+=f"\n# RESULTATS FINAUX POUR **{simulations} SIMULATIONS** DE **{nbgenerations} GENRATIONS**"
+        self.texte+=f"\n# RESULTATS FINAUX POUR **{simulations} SIMULATIONS** DE **{nbgenerations} GENERATIONS**"
         self.texte+="\n--------------------------------------------------------------------------------------"
 
         for algo, resultat in self.final_data.items():
