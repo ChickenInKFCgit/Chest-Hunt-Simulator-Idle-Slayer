@@ -35,6 +35,29 @@ Demande : 5000 générations et 3 simulations
 
 Résultat :
 ```
-
+--------------------------------------------------------------------------------------
+# RESULTATS FINAUX POUR **5 SIMULATIONS** DE **50000 GENRATIONS**
+--------------------------------------------------------------------------------------
+### algo_FULL_GAMBLE 
+Moyenne Mimics : 0.543 | Moyenne Coffres : 9.663 | Winrate : 0.094% | wins : 47.2/50000
+### algo_SHIELD_DIRECT 
+Moyenne Mimics : 1.343 | Moyenne Coffres : 15.372 | Winrate : 0.163% | wins : 81.6/50000
+### algo_DOUBLE_SHIELD 
+Moyenne Mimics : 0.82 | Moyenne Coffres : 11.037 | Winrate : 1.464% | wins : 732.2/50000
+### algo_RAISONNABLE 
+Moyenne Mimics : 0.692 | Moyenne Coffres : 10.649 | Winrate : 1.958% | wins : 979.0/50000
 ```
+Le format markdown, une fois interprété, ressemble à :
+
+--------------------------------------------------------------------------------------
+# RESULTATS FINAUX POUR **5 SIMULATIONS** DE **50000 GENRATIONS**
+--------------------------------------------------------------------------------------
+### algo_FULL_GAMBLE 
+Moyenne Mimics : 0.543 | Moyenne Coffres : 9.663 | Winrate : 0.094% | wins : 47.2/50000
+### algo_SHIELD_DIRECT 
+Moyenne Mimics : 1.343 | Moyenne Coffres : 15.372 | Winrate : 0.163% | wins : 81.6/50000
+### algo_DOUBLE_SHIELD 
+Moyenne Mimics : 0.82 | Moyenne Coffres : 11.037 | Winrate : 1.464% | wins : 732.2/50000
+### algo_RAISONNABLE 
+Moyenne Mimics : 0.692 | Moyenne Coffres : 10.649 | Winrate : 1.958% | wins : 979.0/50000
 
